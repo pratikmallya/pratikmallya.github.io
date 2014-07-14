@@ -1,4 +1,4 @@
 pratikmallya.github.io
 ======================
 
-Content for Pratik's Public Webpage
+Content for Homepage
