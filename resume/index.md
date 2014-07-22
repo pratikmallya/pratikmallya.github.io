@@ -66,5 +66,4 @@ Sports
 
 ----
 
-> <pratik.mallya@gmail.com> • 217 607 4407\
-
+> <pratik.mallya@gmail.com>\
