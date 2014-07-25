@@ -3,7 +3,7 @@ Pratik Mallya
 
 ----
 
->  Specialties: Python, JavaScript, Algorithms, Networking
+>  Specialties: Python, JavaScript, CoffeeScript, Algorithms, Networking
 
 ----
 
@@ -53,23 +53,6 @@ Education
 
     Top Indian school of Engineering with
     highly selective recruitment.
-
-Technologies
-------------
-
-My mantra is to write clean, maintainable code and automate builds and tests.
-:   *Languages
-    
-     I use the following languages daily and am fairly proficient in them:
-     Python, Javascript, CoffeeScript, C
-
-:    *Frameworks
-     
-     I'm familiar with the following frameworks and technologies:
-     AngularJS, RequireJS, FoundationJS, jQuery, Flask, grunt, npm, make
-
-I use git for version control.
-
 
 Activities and interests
 ------------------------
