@@ -36,6 +36,11 @@ Summer 2012
     over 100 python packages as part of the Enthought Python Distribution
     (EPD), a process which had previously required a full-time build engineer.
 
+Summer 2009
+:   *Engineering Intern at [BARC](http://www.barc.gov.in/)*
+     (Mumbai, India)
+
+     Worked at the Ultasonic Intstrumentation Section, a part of the Electronics Division. Wrote a Graph Plotting Program in Visual Basic from Scratch. This Program obtained real time data from ultrasonic transducers (used to detect cracks in casings of fuel rods, a process know as Non-Destructive Testing) and analysed it to give the user a detailed picture of the frequency spectrum picked up by the transducers.
 
 Education
 ---------
@@ -44,26 +49,46 @@ Education
 :   *MS in Computer Science at University of Illinois*
     (Urbana, Illinois).
 
-     Thesis title: On the problem of Parallelizing Manifold Covering 
-     Algorithms
+     GPA: 3.65/4
 
    
 2007-2011
-:   *BS in Computer Science in BITS, Pilani* (Goa, India).
+:   *BS in Computer Science in BITS, Pilani* 
+    (Goa, India).
 
-    Top Indian school of Engineering with
-    highly selective recruitment.
+     GPA: 9.1/10
+
+Research Experience
+-------------------
+
+2012-2013
+:   *Graduate Research Assistant at University of Illinois*
+    (Urbana, Illinois)
+
+    Thesis Title: On the problem of parallelizing manifold covering algorithms 
+    (https://www.ideals.illinois.edu/bitstream/handle/2142/49413/Pratik_Mallya.pdf?sequence=1)
+
+    I developed parallel scalable methods for Numerical Continuation analysis 
+    of power systems
+
+2011
+:   *Research Intern at [MatScience](http://www.imsc.res.in/)*
+
+    Tensor Visualization of nematic Liquid crystals. I helped to visualize a 
+    physical phenomena on a supercomputer, then tweaked the code so that it 
+    could be run on a PC
+
+
 
 Activities and interests
 ------------------------
 
 Hobbies
-:   I like travelling and outdoors; currently trying to get to all
-    nearby state parks in Texas. I also do improv theater.
+:   Travelling, Yoga, Dancing. I also do improv theater.
 
 Sports
 :   Running, Swimming, Racquetball, Tennis, Soccer
 
 ----
 
-> <pratik.mallya@gmail.com>\
+> <pratik.mallya@gmail.com>\ Austin, TX
