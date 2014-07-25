@@ -65,14 +65,14 @@ Research Experience
 :   *Graduate Research Assistant at University of Illinois*
     (Urbana, Illinois)
 
-    Thesis Title: On the problem of parallelizing manifold covering algorithms 
-    (https://www.ideals.illinois.edu/bitstream/handle/2142/49413/Pratik_Mallya.pdf?sequence=1)
+    Thesis Title: [On the problem of parallelizing manifold covering algorithms](https://www.ideals.illinois.edu/bitstream/handle/2142/49413/Pratik_Mallya.pdf?sequence=1)
 
     I developed parallel scalable methods for Numerical Continuation analysis 
     of power systems
 
 2011
 :   *Research Intern at [MatScience](http://www.imsc.res.in/)*
+     (Chennai, India)
 
     Tensor Visualization of nematic Liquid crystals. I helped to visualize a 
     physical phenomena on a supercomputer, then tweaked the code so that it 
