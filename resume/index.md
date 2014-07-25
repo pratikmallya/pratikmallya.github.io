@@ -22,8 +22,8 @@ Since 2013
     framework, is written mostly in CoffeeScript and uses Foundation as
     its UI framework.
 
-    * Overhauled the editor used by content creators to upload material
-    (videos, subtitles etc) to the database. 
+    * Overhauled the tool used by content creators to upload material
+    (videos, subtitles etc) to the website. 
     
     * Automation scripts for transfer of content between places (local to 
     Staging to Production).
