@@ -69,5 +69,44 @@ something similar.
 <p>
 Wish me luck!
 </p>
+<h4>Configuring A Custom Domain</h4>
+<p>(Added August 8 2014)</p>
+<p>One of the first things I wanted was a custom domain name. There are many
+reasons why you would want to host your website under a custom domain name 
+rather than using Github's subdomain, but I think the most important one is 
+that in case I wanted to move my site away from Github, I would have to 
+change all references to my old webpage: Resume's, other websites, business
+cards etc. Having you own domain name can be really cheap, I used 
+<a href="https://www.namecheap.com">Namecheap</a> to obtain mine for $8 p.a.
+</p>
+<p>I wasn't really familiar with DNS, so at first I had trouble configuring it.
+In particular, I did not configure an A record to point to the ip address of
+Github. An A record is an address record, which is what tells your DNS host
+(in this case, Namecheap) where he can find the content for the domain. 
+Since I did not configure it, of course the content could not be found.
+</p>
+<p> Anyways, here's what you need to do:</p>
+<ol>
+    <li>add a 
+        <a href="https://github.com/pratikmallya/pratikmallya.github.io/blob/master/CNAME">
+            CNAME
+        </a> file in your repository which contains the bare domain name
+    </li>
+    <li>configure <em>two</em> A records to point to the ip address of Github 
+        pages. You can find the ip addresses
+        <a href="https://help.github.com/articles/my-custom-domain-isn-t-working#dns-errors">
+            here.    
+        </a>
+    </li>
+    <li>Add a CNAME for the url provided by Github, so that everyone that 
+        tries to access that url will be redirected to your new page. So,
+        my case I added a CNAME record with url as 
+        <a href="http://pratikmallya.github.io">pratikmallya.github.io</a>.
+        Therefore, anyone entering that url in the browser will be 
+        automatically redirected to my custom domain name 
+        <a href="http://pratikmallya.github.io">pratikmallya.me.</a>
+    </li>
+</ol>
+
 </body>
 </html>
