@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DevOps and Money</title>
+    <meta name="description" content="How DevOps save money">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<p>August 20 2014 / <a href="../../index.html">Pratik Mallya</a></p>
+
+<h1>DevOps and Money</h1>
+
+<p>
+  Yesterday, I attended my first ever
+  <a href="http://www.meetup.com/CloudAustin/">Cloud Austin Meetup</a>.
+  My motivation was mostly networking, free food and peeking into the
+  offices of Rackspace, a potential future employer.
+</p>
+
+<p>
+  The office was basically huge open spaces partitioned into cubicles. Not
+  really my idea of a dream place to work at. I can imagine the din that
+  would be present everyday. People coming in, talking over phones etc.
+  As usual, in an attempt to make it habitable, it was plastered with
+  various memorablia: University emblems, country flags and so on. Anyways,
+  since I did not see them actually at work, I can't really say how good or
+  bad it would be in regular hours (I went there around 7pm)
+</p>
+<p>
+  The food itself was BBQ and really nice. But it was the networking that was
+  the best part. I met a guy who had his own consultancy-kind of company; it
+  looked like they would architect cloud-based solutions to other companies
+  problems, or maybe assist/advise them on their cloud-based strategy. The
+  talk itself was extremely interesting.
+  <a href="http://blog.dustinkirkland.com/">Dustin Kirkland</a> demoed an
+  orange-box: a suitcase sized machine that was a DIY that canonical did
+  to basically demo Juju. That's basically what Dustin did, although of course
+  I'm doing his beautiful talk no justice. The cool thing about Juju is the
+  GUI: its like a graphical interface that explicitly shows the relationships
+  between the different stacks that are being deployed. So, Heat depends on
+  MySQL, so MySQL is fetched and installed first, and then Heat and so on.
+  Basically, a way to quickly deploy a complete environment for development or
+  production, in an idempotent and repeatable manner. Even from my scant
+  experience of Ops, I could see that this is a fucking amazing tool.
+</p>
+<p>
+  Dustin demoed something called MaaS: Machine as a Service. I was confused
+  for a bit: how can you deploy anything to 'bare metal'? You need some
+  kind of OS running, right? Dustin explained that the machines were being
+  <a href="http://en.wikipedia.org/wiki/Preboot_Execution_Environment">PXE</a>
+  booted. I'm guessing there is some kind of minimal OS that is being booted,
+  and then he showed how VM's could be provisioned. It was currently only
+  Ubuntu, but he mentioned that they would soon allow Windows images too,
+  which would surely be a HUGE deal for all the windows sysadmins out there.
+  Anyways, Dustin seemed to be arguing that it might be cost-effective for
+  organizations to run their own clouds with little overhead, rather than
+  rely on someone elses cloud. I don't think startups will give up the
+  convenience of Amazon anytime soon, but once an established traffic pattern
+  has been established, it might make sense to roll your own stuff.
+</p>
+<p>
+  But I think the most interesting conversation was one I had with Boyd. Since
+  I did not consider myself a DevOps, the conversation had drifted to what
+  exactly a DevOps does. I had worked with Chip over at Enthought, so I was
+  familiar somewhat with what DevOps people did, but Boyd had an interesting
+  example.
+</p>
+<p>
+  Simply stated, if Rob has a PR which is avaiting merge into the production
+  code, that is basically X amount of hours, and hence Y amount of money,
+  which was basically tied up there in the PR. The longer one waited to
+  merge the PR, the more money was being locked up, spent without returns.
+  Whereas if one had a rigorous CI and testing system set up, then the feature
+  would never languish, and that money would never lie in limbo.
+</p>
+<p>
+  This was such a stupidly simple concept, but I had never thought of it that
+  way at all. I certainly understood and even implemented agile methodology to
+  become more productive. But, I never really thought of it as being something
+  serious: more like motivational speeches. Great if you hear them, not much
+  missed if you don't. But this example really drove home the point that it
+  was the most precious resource, money, that was being tied up just because
+  stuff wasn't organized well enough.
+</p>
+<p>
+  And then it struck me: basically, money was being used as a metric to improve
+  performance. After all, businesses are in existence due to the requirement of
+  generating that one resource. So it made so much sense to measure things
+  directly in terms of money. In fact, I wondered if it would make me value my
+  own time more, if I thought about how much opportunity cost was being lost
+  if I was not productive. In isolation, metrics mean very little; tied to
+  something as valuable as money, they immediately start making sense.
+</p>
+
+</body>
+</html>
