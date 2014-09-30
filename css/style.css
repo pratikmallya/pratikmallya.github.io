@@ -4,34 +4,40 @@ to link back to them here, because I think its cool to acknowledge borrowed
 code.
 http://bl.ocks.org/
 */
+/*
+The following changes were contributed by Prakhar Srivastav
+(http://prakhar.me/). Many thanks for him for his contribution!
+Changes:
+1. Best to stick to one unit of measurement either em or px.
+2. Use max-widths so that you can make your content responsive.
+3. If you use margin: a b, then top and bottom get a and right left get b.
+   Leads to cleaner rules
+4. a(:not)(:hover) is not recommended (cross-browser issues) instead use
+   two rules for a and a:hover
+*/
 body {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  margin: 1em auto 4em auto;
-  position: relative;
-  tab-size: 2;
-  width: 960px;
+font-family: "Helvetica Neue", Helvetica, sans-serif;
+margin: 40px auto;
+max-width: 760px;
+padding: 20px;
+text-rendering: optimizeLegibility;
 }
 
+a { text-decoration: none; }
+a:hover { text-decoration: underline };
+
 p, ol {
-  line-height: 1.5em;
-  width: 720px;
-  font-family: "PT Serif", serif;
+line-height: 1.5em;
+font-family: "PT Serif", serif;
 }
 
 .topic-list {
-  margin: 10px 0px 0px 50px;
+margin: 10px 0px 0px 50px;
 }
+
 h1 {
-  font-size: 64px;
-  font-weight: 300;
-  letter-spacing: -2px;
-  margin: .8em 0 0.8em 0em;
-}
-
-h1, h2 {
-  text-rendering: optimizeLegibility;
-}
-
-a:not(:hover) {
-    text-decoration: none;
+font-size: 64px;
+font-weight: 300;
+letter-spacing: -2px;
+margin: 30px 0;
 }
