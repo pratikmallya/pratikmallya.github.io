@@ -16,28 +16,43 @@ Changes:
    two rules for a and a:hover
 */
 body {
-font-family: "Helvetica Neue", Helvetica, sans-serif;
-margin: 40px auto;
-max-width: 760px;
-padding: 20px;
-text-rendering: optimizeLegibility;
+  font-family: "PT Serif", serif;
+  margin: 40px auto;
+  max-width: 760px;
+  padding: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 a { text-decoration: none; }
-a:hover { text-decoration: underline };
+a:hover { text-decoration: underline; }
 
 p, ol {
-line-height: 1.5px;
-font-family: "PT Serif", serif;
-}
-
-.topic-list {
-margin: 10px 0px 0px 50px;
+  line-height: 30px;
 }
 
 h1 {
-font-size: 64px;
-font-weight: 300;
-letter-spacing: -2px;
-margin: 30px 0;
+  font-size: 64px;
+  font-weight: 300;
+  letter-spacing: -2px;
+  margin: 30px 0;
 }
+
+div.entry {
+  margin: 40px 0;
+}
+
+div.date {
+  font-style: italic;
+  float: left;
+  width: 150px;
+  text-align: right;
+}
+
+div.detail {
+  margin-left: 200px;
+}
+
