@@ -27,7 +27,7 @@ a { text-decoration: none; }
 a:hover { text-decoration: underline };
 
 p, ol {
-line-height: 1.5em;
+line-height: 1.5px;
 font-family: "PT Serif", serif;
 }
 
