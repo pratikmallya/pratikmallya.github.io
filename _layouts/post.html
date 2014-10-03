@@ -1,0 +1,14 @@
+---
+---
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+    <article class="post">
+        <p>
+            <time datetime="{{ page.date | date_to_xmlschema }}" class="page-date">{{ page.date | date_to_string }}</time> /
+            <a href="{{ site.baseurl }}">Pratik Mallya</a>
+        </p>
+        <h1 class="post-title">{{ page.title }}</h1>
+        {{ content }}
+    </article>
+</html>
