@@ -17,3 +17,6 @@ defaults:
       type: "posts"
     values:
       layout: "simple"
+
+# don't want .html at end of urls
+permalink: pretty
