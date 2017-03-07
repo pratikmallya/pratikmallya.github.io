@@ -4,7 +4,7 @@ baseurl: /
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
 
 # Conversion
-highlighter: pygments
+highlighter: rouge
 
 kramdown:
   input: GFM
