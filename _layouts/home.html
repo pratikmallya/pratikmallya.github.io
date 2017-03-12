@@ -5,7 +5,7 @@
 
 <body>
     <h1 class="post-title">{{ page.title }}</h1>
-    {% for post in site.posts limit:5 %}
+    {% for post in site.posts %}
     <div class="entry">
       <div class="page-date">
         <time datetime="{{ post.date | date_to_xmlschema }}" class="page-date">{{ post.date | date_to_string }}</time>
