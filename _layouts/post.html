@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
     {% include head.html %}
+    <body>
     <article class="post">
         <p>
             <time datetime="{{ page.date | date_to_xmlschema }}" class="page-date">{{ page.date | date_to_string }}</time> /
@@ -12,6 +13,5 @@
         {{ content }}
     </article>
     {% include copyright.html %}
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{ site.baseurl }}assets/css/simple.css">
+    </body>
 </html>
