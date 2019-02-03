@@ -1,9 +1,7 @@
----
----
-<!DOCTYPE html>
+<!doctype html>
+{% include head.html %}
 <html>
-    {% include head.html %}
-    <body>
+  <body>
     <article class="post">
         <p>
             <time datetime="{{ page.date | date_to_xmlschema }}" class="page-date">{{ page.date | date_to_string }}</time> /
