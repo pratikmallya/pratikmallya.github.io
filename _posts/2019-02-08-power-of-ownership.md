@@ -7,7 +7,7 @@ tags: [Productivity, Documentation]
 
 **TLDR**: Write docs in Markdown, watch this [video](https://www.youtube.com/watch?v=pY5i0Io86UQ)
 
-There was an incident that happened at my current workplace which made me re-think my motivations and drive at work. We use a somewhat obtuse tool called Confluence at our company to document things, both for technical and non-technical stuff. Whenever I would be tasked with writing documentation, it would perhaps be the worst part of my day. Why?
+We use a somewhat obtuse tool called Confluence at our company to document things, both for technical and non-technical stuff. Whenever I would be tasked with writing documentation, it would perhaps be the worst part of my day. Why?
 
 * The UI itself seems ridiculously outdated; perhaps that makes me superficial, but I read quite a few blogs, so have seen what kind of layouts/style are common. Reading something formatted poorly seemed like an exercise in futility. It felt like we now had amazing tools for presentation and had just not adopted them (which seems like an easy win)
 * The only history that you can see is the last edit made; looking at changes by clicking through a bunch of "page history" buttons doesn't seem easy. What I didn't realize right away is that with documentation, some metadata around the reasons for the changes made can tell you a lot about whether the doc is trustworthy. Something that was true when your code was deployed in the DataCenter may not hold now when your code is in the Cloud.
