@@ -14,5 +14,5 @@ The beautiful thing about the mission is its universal nature. These are project
 Such an effort would perhaps provide the much needed increase in well paying jobs as the economy is re-oriented towards incredibly high tech investments. There is a glut of PhD in the basic sciences; space would perhaps provide economic oppurtunities for all those minds. Welfare for the highly educated. Maybe one of them will find a cure for cancer.
 
 
-[Apollo 11 documentary] : https://en.wikipedia.org/wiki/Apollo_11_(2019_film)
+[Apollo 11 documentary]: https://en.wikipedia.org/wiki/Apollo_11_(2019_film)
 [kinda, sorta annual summary]: https://ai.googleblog.com/2020/01/google-research-looking-back-at-2019.html
