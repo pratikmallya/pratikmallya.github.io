@@ -7,7 +7,7 @@ Pratik Mallya
 
 ----
 
-Corporate Experience
+Experience
 --------------------
 
 Since 2013
@@ -68,27 +68,14 @@ Research Experience
     Thesis Title: [On the problem of parallelizing manifold covering algorithms](https://www.ideals.illinois.edu/bitstream/handle/2142/49413/Pratik_Mallya.pdf?sequence=1)
 
     I developed parallel scalable methods for Numerical Continuation analysis 
-    of power systems
+    of power systems.
 
 2011
 :   *Research Intern at [MatScience](http://www.imsc.res.in/)*
      (Chennai, India)
 
-    Tensor Visualization of nematic Liquid crystals. I helped to visualize a 
-    physical phenomena on a supercomputer, then tweaked the code so that it 
-    could be run on a PC
-
-
-
-Activities and interests
-------------------------
-
-Hobbies
-:   Travelling, Yoga, Dancing. I also do improv theater.
-
-Sports
-:   Running, Swimming, Racquetball, Tennis, Soccer
+    Tensor Visualization of nematic liquid crystals using Paraview.
 
 ----
 
-> <pratik.mallya@gmail.com>\ Austin, TX
+> <pratik@mallya.dev>\ San Francisco, CA
