@@ -17,7 +17,7 @@ entered it. Physics is even harder but at least your probing the secrets of
 nature. Manager of unreliable machines does not sound very appealing. 
 Especially around the time I graduated, the situation was even worse. No cloud,
 IaaS was just taking off. How the heck did people sleep at night without 
-PagerDuty/DataDog actively  monitoring their shit? With only Slack to 
+PagerDuty/DataDog actively  monitoring their shit? With only email to 
 communicate with team members... I guess people actually called each other 
 when something bad happened.
 
