@@ -21,7 +21,7 @@ PagerDuty/DataDog actively  monitoring their shit? With only email to
 communicate with team members... I guess people actually called each other 
 when something bad happened.
 
-Hoever, cloud and other reliability improvements to the base layers of 
+However, cloud and other reliability improvements to the base layers of 
 computing have made it a lot more solid, and improvements in observability 
 make it easier to see why something failed. Systems remain unreliable as 
 before, but ways of getting around that behavior is now known. OK so maybe it
