@@ -13,7 +13,7 @@ compiled yesterday doesn't today.
 
 
 If I had known just how difficult the field really is, I would not have 
-entered it. Physiscs is even harder but at least your probing the secrets of 
+entered it. Physics is even harder but at least your probing the secrets of 
 nature. Manager of unreliable machines does not sound very appealing. 
 Especially around the time I graduated, the situation was even worse. No cloud,
 IaaS was just taking off. How the heck did people sleep at night without 
@@ -35,4 +35,4 @@ is. Well, at least it ain't trivial.
 Heroku was a step in the right direction. PaaS and FaaS is what developers 
 really want. The OPS part of DevOps is still hard and most developers would 
 rather not do it. Perhaps FaaS will become powerful and cheap enough that 
-they don't have to. Who knows.
+they don't have to. Who knows.  
