@@ -164,11 +164,11 @@ mysql>
 Now lets create the table and add a few rows:
 
 ```sql
-create database demo;
-use database demo;
-create table files (name VARCHAR(20), created_at DATE);
-insert into files
-values
+CREATE DATABASE demo;
+USE DATABASE demo;
+CREATE TABLE files (name VARCHAR(20), created_at DATE);
+INSERT INTO files
+VALUES
 ("my_file.txt", NOW()),
 ("My_file.txt", DATE_SUB(NOW(), INTERVAL 2 HOUR));
 ```
@@ -176,7 +176,7 @@ values
 check values in the table:
 
 ```sql
-select * from files;
+SELECT * FROM files;
 +-------------+------------+
 | name        | created_at |
 +-------------+------------+
