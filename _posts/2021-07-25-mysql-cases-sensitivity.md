@@ -122,7 +122,11 @@ GROUP BY files.name COLLATE utf8mb4_0900_as_cs;
 Note that we're using the `_cs` (case sensitive) version of the collation. If
 a case sensitive collation isn't present, you may also use the `_bin` collation
 for the character set (in this case it would be `utf8mb4_bin`). To see all
-collations for a character set, use e.g. `SHOW COLLATIONS WHERE Charset LIKE 'utf8mb4'`
+collations for a character set, use e.g.
+
+```sql
+SHOW COLLATIONS WHERE Charset LIKE 'utf8mb4'
+```
 
 And that's it! Once we changed our queries to respect collation, the query
 returned different cased versions of the files, and our system was able to
