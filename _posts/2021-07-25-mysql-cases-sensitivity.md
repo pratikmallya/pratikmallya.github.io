@@ -76,7 +76,7 @@ characters with the same weight are considered the "same" when sorting.
 We can get information about the character sets and collations used in our table using `show full columns`:
 
 ```sql
-mysql> show full columns from files;
+mysql> SHOW FULL COLUMNS from files;
 +------------+-------------+--------------------+------+-----+---------+-------+---------------------------------+---------+
 | Field      | Type        | Collation          | Null | Key | Default | Extra | Privileges                      | Comment |
 +------------+-------------+--------------------+------+-----+---------+-------+---------------------------------+---------+
