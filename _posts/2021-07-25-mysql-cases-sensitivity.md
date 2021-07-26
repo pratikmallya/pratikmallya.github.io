@@ -84,7 +84,7 @@ mysql> SHOW FULL COLUMNS from files;
 ```
 
 Collations with a `ci` suffix means that the _collation is case insensitive_!
-To mysql, both the strings `my_file.txt` and `my_file.txt` were the "same",
+To mysql, both the strings `my_file.txt` and `My_file.txt` were the "same",
 when using aggregations. We can double check this assumption by checking the
 "weights" assigned to the strings in the collation:
 
