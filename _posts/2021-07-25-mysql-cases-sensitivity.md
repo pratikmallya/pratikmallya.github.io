@@ -126,7 +126,7 @@ collations for a character set, use e.g. `SHOW COLLATIONS WHERE Charset LIKE 'ut
 
 And that's it! Once we changed our queries to respect collation, the query
 returned different cased versions of the files, and our system was able to
-recognize the file existed in our system.
+recognize the file was already pulled from the source.
 
 As an aside, the [official Mysql documentation] explains these concepts pretty
 well and I would highly recommend reading it at least once.
