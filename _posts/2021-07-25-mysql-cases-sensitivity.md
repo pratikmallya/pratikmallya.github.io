@@ -104,8 +104,8 @@ SELECT MAX(files.created_at) AS files_created_at_max, files.name FROM files GROU
 2 rows in set (0.01 sec)
 ```
 
-We can also tell mysql to use a specific collation just for this
-query:
+If we don't want to alter the DB, we can also tell mysql to use a specific
+collation just for this query:
 ```sql
 SELECT MAX(files.created_at) AS files_created_at_max, files.name COLLATE utf8mb4_0900_as_cs
 FROM files
