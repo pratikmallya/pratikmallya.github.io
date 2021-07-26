@@ -9,6 +9,7 @@ highlighter: rouge
 kramdown:
   input: GFM
   hard_wrap: false
+  syntax_highlighter: rouge
 
 defaults:
   -
@@ -21,6 +22,4 @@ defaults:
 # don't want .html at end of urls
 permalink: pretty
 
-# code highlight
-markdown: redcarpet
 extensions: [fenced_code_blocks]
