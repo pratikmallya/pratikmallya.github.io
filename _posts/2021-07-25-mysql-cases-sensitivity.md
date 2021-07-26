@@ -12,9 +12,9 @@ The other day we saw the following issue in our production system: A service
 that fetches files from remote sources kept fetching a file repeatedly and
 indefinitely. The logic for the system was simple: it periodically scanned a
 "source" (e.g. an s3 bucket). If a file name existed in the source that did not
-exist in a DB table of fetched files, it would download the file, create a db
-entry with the file name. On further scans, the file would no longer be fetched
-since an entry for it would exist in our database.
+exist in a MySQL table of fetched files, it would download the file and
+create a row with the file name. On further scans, the file would no longer
+be fetched since an entry for it would exist in our database.
 
 A closer inspection revealed the existence of multiple files in the source,
 differing in case. e.g.
@@ -146,16 +146,17 @@ the query returned different cased versions of the files, and our system was
 able to recognize the file was already pulled from the source.
 
 As an aside, the [official MySQL documentation] explains these concepts pretty
-well and I would highly recommend reading it at least once.
+well and I would highly recommend reading it at least once. Case sensitivity
+is covered in [B.3.4.1 Case Sensitivity in String Searches].
 
 [official MySQL documentation]: https://dev.mysql.com/doc/refman/8.0/en/charset.html
-
+[B.3.4.1 Case Sensitivity in String Searches]: https://dev.mysql.com/doc/refman/8.0/en/case-sensitivity.html
 ### Reproducing the Experiment
 
 In this section, I'll describe how to set up an MySQL environment to test this
 behavior.
 
-Lets use a dockerized MySQL `v8.0`. Start up the server ([instructions]):
+Lets use a dockerized MySQL `v8.0`. [Start up the server] by simply running this:
 ```
 docker run --name mysql-test -e MYSQL_ROOT_PASSWORD=secret -p 127.0.0.1:33060:3306 -d mysql:8.0
 ```
@@ -204,7 +205,7 @@ SELECT * FROM files;
 
 You can now run the queries described in the post!
 
-[instructions]: https://hub.docker.com/_/mysql?tab=description
+[Start up the server]: https://hub.docker.com/_/mysql?tab=description
 
 
 
