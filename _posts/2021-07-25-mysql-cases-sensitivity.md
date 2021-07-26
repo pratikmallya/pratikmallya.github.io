@@ -13,7 +13,8 @@ that fetches files from remote sources kept fetching a file repeatedly and
 indefinitely. The logic for the system was simple: it periodically scanned a
 "source" (e.g. an s3 bucket). If a file name existed in the source that did not
 exist in a DB table of fetched files, it would download the file, create a db
-entry with the file name. On further scans, the file would no longer be fetched.
+entry with the file name. On further scans, the file would no longer be fetched
+since an entry for it would exist in our database.
 
 A closer inspection revealed the existence of multiple files in the source,
 differing in case. e.g.
