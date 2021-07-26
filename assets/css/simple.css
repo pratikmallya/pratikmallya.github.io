@@ -15,6 +15,8 @@ Changes:
 4. a(:not)(:hover) is not recommended (cross-browser issues) instead use
    two rules for a and a:hover
 */
+@import "rouge_style.css";
+
 body {
   font-family: "PT Serif", serif;
   margin: 40px auto;
