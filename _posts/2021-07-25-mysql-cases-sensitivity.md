@@ -88,7 +88,7 @@ To mysql, both the strings `my_file.txt` and `My_file.txt` were the "same",
 when using aggregations. We can double check this assumption by checking the
 "weights" assigned to the strings in the collation:
 
-To fix this, we could either change the collation for the table:
+To fix this, we could change the collation for the table:
 ```sql
 ALTER TABLE files convert to CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs;
 ```
