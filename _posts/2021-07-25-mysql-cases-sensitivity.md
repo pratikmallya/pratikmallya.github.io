@@ -141,9 +141,9 @@ collations for a character set, use e.g.
 SHOW COLLATIONS WHERE Charset LIKE 'utf8mb4'
 ```
 
-And that's it! Once we changed our queries to respect collation, the query
-returned different cased versions of the files, and our system was able to
-recognize the file was already pulled from the source.
+And that's it! Once we changed our queries to use a case-sensitive collation,
+the query returned different cased versions of the files, and our system was
+able to recognize the file was already pulled from the source.
 
 As an aside, the [official Mysql documentation] explains these concepts pretty
 well and I would highly recommend reading it at least once.
