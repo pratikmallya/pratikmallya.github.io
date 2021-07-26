@@ -147,7 +147,9 @@ able to recognize the file was already pulled from the source.
 
 As an aside, the [official MySQL documentation] explains these concepts pretty
 well and I would highly recommend reading it at least once. Case sensitivity
-is covered in [B.3.4.1 Case Sensitivity in String Searches].
+is covered in [B.3.4.1 Case Sensitivity in String Searches], which points out
+another solution: use `VARBINARY` rather than `VARCHAR` to represent the file
+names.
 
 [official MySQL documentation]: https://dev.mysql.com/doc/refman/8.0/en/charset.html
 [B.3.4.1 Case Sensitivity in String Searches]: https://dev.mysql.com/doc/refman/8.0/en/case-sensitivity.html
