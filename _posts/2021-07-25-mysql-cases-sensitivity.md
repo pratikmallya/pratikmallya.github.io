@@ -144,7 +144,7 @@ docker run --name mysql-test -e MYSQL_ROOT_PASSWORD=secret -p 127.0.0.1:33060:33
 ```
 connect using `mysql` client:
 ```
- mysql -u root --protocol=tcp --port 33060 -p
+$ mysql -u root --protocol=tcp --port 33060 -p
 Enter password:
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 9
