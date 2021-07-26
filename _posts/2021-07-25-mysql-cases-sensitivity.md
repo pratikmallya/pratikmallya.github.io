@@ -98,8 +98,8 @@ SHOW FULL COLUMNS from files;
 
 Collations with a `ci` suffix means that the _collation is case insensitive_!
 To MySQL, both the strings `my_file.txt` and `My_file.txt` were the "same",
-when using aggregations. We can double check this assumption by checking the
-"weights" assigned to the strings in the collation:
+when using aggregations, and thus the query aggregated across both cases and
+returned just one.
 
 To fix this, we could change the collation for the table:
 ```sql
