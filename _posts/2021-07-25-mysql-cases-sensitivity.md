@@ -29,7 +29,7 @@ This seemed suspicious, so we looked at the query to check against the table of
 retrieved files, which looked something like such:
 
 ```sql
-mysql> SELECT MAX(files.created_at) AS files_created_at_max, files.name
+SELECT MAX(files.created_at) AS files_created_at_max, files.name
 FROM files
 GROUP BY files.name;
 ```
