@@ -35,18 +35,14 @@ GROUP BY files.name;
 ```
 Explanation of SQL:
 
-1.
-```
-SELECT MAX(files.created_at) AS files_created_at_max, files.name FROM files
-```
-select the columns `created_at` and `name` from the `files` table. Apply the `MAX` [aggregation operation] to the `created_at` column and call the resulting column `files_created_at_max`.
+1. `SELECT MAX(files.created_at) AS files_created_at_max, files.name FROM files`:
+select the columns `created_at` and `name` from the `files` table. Apply the
+`MAX` [aggregation operation] to the `created_at` column and call the resulting
+column `files_created_at_max`.
 
-2.
-
-```sql
-GROUP BY files.name;
-```
-For 2 rows with the same `name`, get the row with the _larger value for `created_at`_ (the `MAX` aggregator from the previous step). The result is a list of rows with unique `name` and `created_at`.
+2. `GROUP BY files.name`: For 2 rows with the same `name`, get the row with the
+_larger value for `created_at`_ (the `MAX` aggregator from the previous step).
+The result is a list of rows with unique `name` and `created_at`.
 
 [aggregation operation]: https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html
 
