@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Be Careful With MySQL Case Insensitivity"
-description: "Some surprising bugs when working with mysql queries"
-tags: ["mysql"]
+description: "Some surprising bugs when working with MySQL queries"
+tags: ["MySQL"]
 ---
 
-TLDR: mysql collations are are case-insensitive by default leading to
+TLDR: MySQL collations are are case-insensitive by default leading to
 unexpected behavior in certain situations.
 
 The other day we saw the following issue in our production system: A service
@@ -76,10 +76,10 @@ GROUP BY files.name;
 This seemed suspicious: why would the query return just one of the names when
 both existed in the table?
 
-A quick google search for "mysql case sensitive" gave some pointers to what the
-problem might be. Mysql defines _collations_ for every _character set_
+A quick google search for "MySQL case sensitive" gave some pointers to what the
+problem might be. MySQL defines _collations_ for every _character set_
 (e.g. ascii, utf-8); in general, a collation is a rule for comparing characters
-in a character set. A mysql collation simply defines a _weight_
+in a character set. A MySQL collation simply defines a _weight_
 (a numerical value) for each character, and uses that for comparisons. Two
 characters with the same weight are considered the "same" when sorting.
 
@@ -97,7 +97,7 @@ SHOW FULL COLUMNS from files;
 ```
 
 Collations with a `ci` suffix means that the _collation is case insensitive_!
-To mysql, both the strings `my_file.txt` and `My_file.txt` were the "same",
+To MySQL, both the strings `my_file.txt` and `My_file.txt` were the "same",
 when using aggregations. We can double check this assumption by checking the
 "weights" assigned to the strings in the collation:
 
@@ -117,7 +117,7 @@ SELECT MAX(files.created_at) AS files_created_at_max, files.name FROM files GROU
 2 rows in set (0.01 sec)
 ```
 
-If we don't want to alter the DB, we can also tell mysql to use a specific
+If we don't want to alter the DB, we can also tell MySQL to use a specific
 collation just for this query:
 ```sql
 SELECT MAX(files.created_at) AS files_created_at_max, files.name COLLATE utf8mb4_0900_as_cs
@@ -145,17 +145,17 @@ And that's it! Once we changed our queries to use a case-sensitive collation,
 the query returned different cased versions of the files, and our system was
 able to recognize the file was already pulled from the source.
 
-As an aside, the [official Mysql documentation] explains these concepts pretty
+As an aside, the [official MySQL documentation] explains these concepts pretty
 well and I would highly recommend reading it at least once.
 
-[official Mysql documentation]: https://dev.mysql.com/doc/refman/8.0/en/charset.html
+[official MySQL documentation]: https://dev.mysql.com/doc/refman/8.0/en/charset.html
 
 ### Reproducing the Experiment
 
-In this section, I'll describe how to set up an mysql environment to test this
+In this section, I'll describe how to set up an MySQL environment to test this
 behavior.
 
-Lets use a dockerized mysql `v8.0`. Start up the server ([instructions]):
+Lets use a dockerized MySQL `v8.0`. Start up the server ([instructions]):
 ```
 docker run --name mysql-test -e MYSQL_ROOT_PASSWORD=secret -p 127.0.0.1:33060:3306 -d mysql:8.0
 ```
