@@ -46,7 +46,20 @@ The result is a list of rows with unique `name` and `created_at`.
 
 [aggregation operation]: https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html
 
-This query seemed to only fetch results for one case:
+For demonstration, I've created a table with 2 entries with the names differing
+only in case:
+
+```sql
+SELECT * FROM files;
++-------------+------------+
+| name        | created_at |
++-------------+------------+
+| my_file.txt | 2021-07-26 |
+| My_file.txt | 2021-07-26 |
++-------------+------------+
+```
+
+The query seemed to only fetch results for one case:
 
 ```sql
 SELECT MAX(files.created_at) AS files_created_at_max, files.name
