@@ -2,7 +2,7 @@
 layout: post
 title: "Be Careful With MySQL Case Insensitivity"
 description: "Some surprising bugs when working with mysql queries"
-tags: ["mysql", "java"]
+tags: ["mysql"]
 ---
 
 TLDR: mysql collations are are case-insensitive by default leading to
