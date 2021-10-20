@@ -57,6 +57,7 @@ SELECT * FROM files;
 | my_file.txt | 2021-07-26 |
 | My_file.txt | 2021-07-26 |
 +-------------+------------+
+2 rows in set (0.01 sec)
 ```
 
 The query seemed to only fetch results for one case:
