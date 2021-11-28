@@ -6,30 +6,30 @@ tags: ["podman", "container", "docker", "projects"]
 ---
 
 Personal projects for me serve several purposes. They can be an effective learning tool, a good way to explore a new 
-tool or technology. Often its about solving a problem in a *more* convoluted way than the optimized one, just to 
-explore the problem space better and to see what all you can do with it. 
+technology. Sometimes its just about solving a problem in a *more* convoluted way than the optimized one, just to 
+explore the problem space better and to see what all I can do. 
 
-Most projects/ideas don't really see the light of day, so I wanted to try an experiment where I wrote about an 
+Most projects don't really see the light of day, so I wanted to try an experiment where I wrote about an 
 incomplete one, one where I failed to get the result I wanted, but wrote about how I approached it and how far I could
 get. Maybe some day the conditions change and I'm able to look back and finish it.
 
-The basic idea is to have remote container "daemon"; essentially something that would allow us to build container 
+The basic idea is to have remote container "daemon"; essentially something that would allow me to build container 
 images from anywhere. Usually, you install docker for desktop on mac, and then `docker build`. However, docker is a 
 resource hungry application; having it run on a beefy work Macbook Pro is fine, but on my lean personal Macbook Air?
 Not so much.
 
 The first improvement is to use [podman]. It removes the need to have a daemon... making this whole project 
-somewhat useless. However, to use `podman` on macos requires spinning up a linux vm (which `podman machine` does) 
+somewhat useless 😅. However, to use `podman` on macos requires spinning up a linux vm (which `podman machine` does) 
 because the underlying technology used by containers (cgroups?) is only available on linux.
 
-OK, so now the problem has changed from running a docker daemon somewhere, to simply having a linux instance with 
+So now the problem has changed from running a docker daemon somewhere, to simply having a linux instance with 
 `podman` installed accessible from my machine. That seems like a much simpler problem.
 
 [podman]: https://podman.io/
 ### Searching for Cheap Linux Boxes
 
 Ideally, we can wring a free or really cheap VM from one of the multitudes of cloud providers out there. The first one
-to land in my google search dragnet was OCI, which has an always free tier. You get a pretty wimpy x86 VM or a 
+to land in my google search dragnet was [OCI], which has an always free tier. You get a pretty wimpy x86 VM or a 
 decent arm VM, so of course I went with the arm VM (with `Oracle-Linux-8.4-aarch64-2021.10.25-0`). The 
 "shape configuration" (i.e. specs) looked like:
 
@@ -42,7 +42,7 @@ decent arm VM, so of course I went with the arm VM (with `Oracle-Linux-8.4-aarch
 |Memory (GB)             |24                  |
 |Local disk              |Block storage only  |
 
-
+[OCI]: https://www.oracle.com/cloud/free/
 ### Installing podman
 Mostly followed [Podman Clients].
 
@@ -57,7 +57,7 @@ sudo loginctl enable-linger opc
 
 (`opc` is the default username selected by OCI)
 
-Easy 
+Easy 😎
 
 However, that ended up not working. I don't know why, and didn't investigate it further. I just ran the commands after
 ssh-ing into the machine. 🤷
