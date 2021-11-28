@@ -19,17 +19,12 @@ images from anywhere. Usually, you install docker for desktop on mac, and then `
 resource hungry application; having it run on a beefy work Macbook Pro is fine, but on my lean personal Macbook Air?
 Not so much.
 
-The first improvement is just to use podman. This is where I did stop, since `podman` ended up being pretty easy
-to install and use.
+The first improvement is just to use `podman`. It removes the need to have a daemon... making this whole project 
+somewhat useless. However, to use `podman` on macos requires spinning up a linux vm (which `podman machine` does) 
+because the underlying technology used by containers (cgroups?) is only available on linux.
 
-What do we need?
-1. Something that will let us run podman *somewhere*
-2. The remote podman is somehow accessible from my machine
-
-The most straightforward thing to do seems to be to get a cloud linux vm, install `podman` on it, and then... make it
-accessible from my machine, but safely. As a first step, use ssh tunneling, but if we want to get really fancy, use 
-some sort of authentication and make it publicly available. 
-
+OK, so now the problem has changed from running a docker daemon somewhere, to simply having a linux instance with 
+`podman` installed accessible from my machine. That seems like a much simpler problem.
 
 ### Appendix: Using podman on MacOS
 
