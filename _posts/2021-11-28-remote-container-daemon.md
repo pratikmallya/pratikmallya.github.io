@@ -30,21 +30,21 @@ So now the problem has changed from running a docker daemon somewhere, to simply
 
 Ideally, we can wring a free or really cheap VM from one of the multitudes of cloud providers out there. The first one
 to land in my google search dragnet was [OCI], which has an always free tier. You get a pretty wimpy x86 VM or a 
-decent arm VM, so of course I went with the arm VM (with `Oracle-Linux-8.4-aarch64-2021.10.25-0`). The 
-"shape configuration" (i.e. specs) looked like:
+decent arm VM, so of course I went with the arm VM. The "shape configuration" (i.e. specs) looked like:
 
 
-|Type                    |Value               |
-|------------------------|--------------------|
-|Shape                   |VM.Standard.A1.Flex |
-|OCPU count              |4                   |
-|Network bandwidth (Gbps)|4                   |
-|Memory (GB)             |24                  |
-|Local disk              |Block storage only  |
+|Type                    |Value                                |
+|------------------------|-------------------------------------|
+|OS                      |Oracle-Linux-8.4-aarch64-2021.10.25-0|
+|Shape                   |VM.Standard.A1.Flex                  |
+|OCPU count              |4                                    |
+|Network bandwidth (Gbps)|4                                    |
+|Memory (GB)             |24                                   |
+|Local disk              |Block storage only                   |
 
 [OCI]: https://www.oracle.com/cloud/free/
 ### Installing podman
-Mostly followed [Podman Clients].
+Mostly followed [this article].
 
 OCI lets you specify a [cloud-init] script, so just paste the following lines:
 
@@ -64,7 +64,7 @@ ssh-ing into the machine. 🤷
 
 
 [cloud-init]: https://cloudinit.readthedocs.io/en/latest/#
-[Podman Clients]: https://www.redhat.com/sysadmin/podman-clients-macos-windows
+[this article]: https://www.redhat.com/sysadmin/podman-clients-macos-windows
 ### Configure podman to connect to remote machine
 
 ```
