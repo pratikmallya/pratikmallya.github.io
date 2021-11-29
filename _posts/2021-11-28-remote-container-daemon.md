@@ -49,9 +49,16 @@ Mostly followed [this article].
 OCI lets you specify a [cloud-init] script, so just paste the following lines:
 
 ```
+# not sure how yum works but apparantly this is required
 sudo yum module enable -y container-tools
+# install podman itself
 sudo yum -y install podman
+# enable podman.socket systemd service. This means that podman will listen on the unix socket that clients usually 
+# connect to, and if a client does try to connect, it will start podman and serve the client. This is a systemd 
+# concept, more details here: https://www.freedesktop.org/software/systemd/man/systemd.socket.html
 systemctl --user enable podman.socket
+# since we want "rootless" podman, we want to let the non-root user `opc` "linger" without an active login session
+# not exactly sure how this works, mostly copy pasta'd from the article
 sudo loginctl enable-linger opc
 ```
 
@@ -68,7 +75,10 @@ ssh-ing into the machine. 🤷
 ### Configure podman to connect to remote machine
 
 ```
+# add a connection to the remote podman machine
 podman system connection add oci --identity ~/.ssh/id_rsa ssh://192.9.229.238:22/run/user/1000/podman/podman.sock
+# set the remote podman machine as the default connection so we don't have to specify `--connection oci` for `podman`
+# commands
 podman system connection default oci
 ```
 (the user id for opc is 1000, as can be verified with `lslogins`: 
