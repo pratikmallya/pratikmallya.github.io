@@ -5,7 +5,7 @@ description: ""
 tags: ["podman", "container", "docker", "projects"]
 ---
 
-Personal projects for serve several purposes. They can be an effective learning tool, a nice way to explore a new 
+Personal projects serve several purposes. They can be an effective learning tool, a nice way to explore a new 
 technology. Sometimes its just about solving a problem in a *more* convoluted way than the optimized one, just to 
 explore the problem space better and to see what all can be done. 
 
