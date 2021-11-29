@@ -19,7 +19,7 @@ resource hungry application; having it run on a beefy work Macbook Pro is fine, 
 Not so much.
 
 The first improvement is to use [podman]. It removes the need to have a daemon... making this whole project 
-somewhat useless 😅. However, to use `podman` on macos requires spinning up a linux vm (which `podman machine` does) 
+somewhat useless 😅. However, to use `podman` on  macOS requires spinning up a linux vm (which `podman machine` does) 
 because the underlying technology used by containers (cgroups?) is only available on linux.
 
 So now the problem has changed from running a docker daemon somewhere, to simply having a linux instance with 
