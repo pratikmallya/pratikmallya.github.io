@@ -37,7 +37,8 @@ we can pipe this into another `kubectl` command to get the pods! To do this, we 
 that lets us pass data piped through in a specific position in the command.
 
 ```
-$ kubectl get no -lLABEL=VALUE --no-headers | awk '{print $1}' | xargs -I % kubectl get po -A --field-selector spec.nodeName=% --no-headers
+$ kubectl get no -lLABEL=VALUE --no-headers | awk '{print $1}' | \
+    xargs -I % kubectl get po -A --field-selector spec.nodeName=% --no-headers
 kube-system    kiam-agent-8xpjr      1/1   Running   0     2d13h
 kube-system    npd-v0.7.1-gd8jt      1/1   Running   0     2d13h
 monitoring     node-exporter-8j5mx   1/1   Running   0     2d13h
@@ -56,7 +57,8 @@ Nice! While we've got all the pods, its kind of ugly and difficult to read. Ther
 To fix the column alignment, we can use the `column` command with the `-t` option:
 
 ```
-$ kubectl get no -lLABEL=VALUE --no-headers | awk '{print $1}' | xargs -I % kubectl get po -A --field-selector spec.nodeName=% --no-headers | column -t
+$ kubectl get no -lLABEL=VALUE --no-headers | awk '{print $1}' | \
+    xargs -I % kubectl get po -A --field-selector spec.nodeName=% --no-headers | column -t
 kube-system    kiam-agent-8s72h     1/1  Running  0  2d14h
 kube-system    npd-v0.7.1-hx9lc     1/1  Running  0  2d14h
 monitoring     node-exporter-rbs6k  1/1  Running  0  2d14h
@@ -67,7 +69,8 @@ monitoring     node-exporter-5pwzq  1/1  Running  0  2d14h
 🎉
 Now, we just need to sort it, and we can use the `sort` command:
 ```
-$ kubectl get no -lLABEL=VALUE --no-headers | awk '{print $1}' | xargs -I % kubectl get po -A --field-selector spec.nodeName=% --no-headers | column -t | sort
+$ kubectl get no -lLABEL=VALUE --no-headers | awk '{print $1}' | \
+    xargs -I % kubectl get po -A --field-selector spec.nodeName=% --no-headers | column -t | sort
 kube-system    kiam-agent-8s72h     1/1  Running  0  2d14h
 kube-system    kiam-agent-dr9jq     1/1  Running  0  2d14h
 kube-system    npd-v0.7.1-hx9lc     1/1  Running  0  2d14h
@@ -84,7 +87,8 @@ it uses the max parallelism that a machine is capable of.
 So our final command would look something like:
 
 ```
-$ kubectl get no -lLABEL=VALUE --no-headers | awk '{print $1}' | xargs -P0 -I % kubectl get po -A --field-selector spec.nodeName=% --no-headers | column -t | sort
+$ kubectl get no -lLABEL=VALUE --no-headers | awk '{print $1}' | \
+    xargs -P0 -I % kubectl get po -A --field-selector spec.nodeName=% --no-headers | column -t | sort
 ```
 
 And that's it!
