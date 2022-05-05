@@ -14,7 +14,6 @@ $ kubectl get no -lLABEL=VALUE
 NAME                           STATUS   ROLES   AGE   VERSION
 ip-10-42-80-248.ec2.internal   Ready    node    34d   v1.16.15
 ip-10-42-87-138.ec2.internal   Ready    node    29d   v1.16.15
-ip-10-42-87-58.ec2.internal    Ready    node    42d   v1.16.15
 ```
 A useful flag is `--no-headers` which will remove the table header:
 
@@ -22,7 +21,6 @@ A useful flag is `--no-headers` which will remove the table header:
 $ kubectl get no -lLABEL=VALUE --no-headers
 ip-10-42-80-248.ec2.internal   Ready   node   34d   v1.16.15
 ip-10-42-87-138.ec2.internal   Ready   node   29d   v1.16.15
-ip-10-42-87-58.ec2.internal    Ready   node   42d   v1.16.15
 ```
 with a little bit of `awk`, we can get just the node names:
 
@@ -30,7 +28,6 @@ with a little bit of `awk`, we can get just the node names:
 $ kubectl get no -lLABEL=VALUE --no-headers | awk '{print $1}'
 ip-10-42-80-248.ec2.internal
 ip-10-42-87-138.ec2.internal
-ip-10-42-87-58.ec2.internal
 ```
 we can pipe this into another `kubectl` command to get the pods! To do this, we can use xargs with its handy `-I` flag, that lets us pass data piped through in a specific position in the command.
 
