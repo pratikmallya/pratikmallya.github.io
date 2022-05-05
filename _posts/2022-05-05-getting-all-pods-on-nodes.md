@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Get all pods running one nodes"
-description: "How to get all pods running on nodes"
+title: "Get all pods running on kubernetes nodes"
+description: "How to get all pods running on kubernetes nodes"
 tags: ["kubernetes", "unix"]
 ---
 
@@ -25,7 +25,7 @@ ip-10-42-80-248.ec2.internal   Ready   node   34d   v1.16.15
 ip-10-42-87-138.ec2.internal   Ready   node   29d   v1.16.15
 ip-10-42-87-58.ec2.internal    Ready   node   42d   v1.16.15
 ```
-with a little bit of awk, we can get just the node names:
+with a little bit of `awk`, we can get just the node names:
 
 ```
 $ kubectl get no -lLABEL=VALUE --no-headers | awk '{print $1}'
@@ -46,7 +46,7 @@ kube-system     npd-v0.7.1-4l6rk                 1/1   Running   0     32h
 monitoring      node-exporter-8znlh              1/1   Running   0     32h
 ```
 In this command the `-I %` instructs `xargs` to substitute `%` for whatever comes in through the pipe, which in this
-case are the node names.
+case are the node names, which are then substituted at the right place in the `kubectl` command.
 
 Nice! While we've got all the pods, its kind of ugly and difficult to read. There are 2 problems:
 
@@ -75,7 +75,7 @@ kube-system    npd-v0.7.1-vzjsj     1/1  Running  0  2d14h
 monitoring     node-exporter-5pwzq  1/1  Running  0  2d14h
 monitoring     node-exporter-rbs6k  1/1  Running  0  2d14h
 ```
-Yay! We solved both the issues. Now we've got a similar output as a `kubectl get po` but for multiple invocations.
+Yay! We solved both the issues. Now we've got a similar output as a `kubectl get po` but for multiple nodes.
 
 There is one more optimization to make. By default, `xargs` will run through each input sequentially, which can get
 really slow if we have a lot of nodes. To make it go faster, we can use the `-P` option for `xargs`, set to `0`, so
