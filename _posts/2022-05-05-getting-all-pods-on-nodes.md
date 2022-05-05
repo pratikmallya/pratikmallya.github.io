@@ -64,7 +64,7 @@ kube-system    npd-v0.7.1-vzjsj     1/1  Running  0  2d14h
 monitoring     node-exporter-5pwzq  1/1  Running  0  2d14h
 ```
 🎉
-Now, we just need to sort it, and we can use the `sort` command:
+Now, we just need to sort it, so we can use the `sort` command:
 ```
 $ kubectl get no -lLABEL=VALUE --no-headers | awk '{print $1}' | \
     xargs -I % kubectl get po -A --field-selector spec.nodeName=% --no-headers | column -t | sort
