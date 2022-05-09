@@ -5,7 +5,7 @@ description: "Building a virtual bookshelf"
 tags: ["books"]
 ---
 
-A [hacker news post] linked to a project to build a [virtual bookshelf]. The author made the source freely avaialble, so naturally I was tempted to deploy a clone with my reading history. The result is at: [bookshelf.mallya.dev/](https://bookshelf.mallya.dev/).
+A [hacker news post] linked to a project to build a [virtual bookshelf]. The author made the source freely avaialble, so naturally I was tempted to deploy a clone with my reading history. The result is at: [bookshelf.mallya.dev](https://bookshelf.mallya.dev/).
 
 The setup was fairly easy, just had to add stanzas to the [index.html] file, add a CNAME to point to it, and done! I added a few tweaks like making the books link to their goodreads page.
 
