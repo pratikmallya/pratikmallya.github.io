@@ -5,9 +5,18 @@ description: "Building a virtual bookshelf"
 tags: ["books"]
 ---
 
-A [hacker news post] linked to a project to build a [virtual bookshelf]. The author made the source freely avaialble, so naturally I was tempted to deploy a clone with my reading history. The result is at: [https://bookshelf.mallya.dev/].
+A [hacker news post] linked to a project to build a [virtual bookshelf]. The author made the source freely avaialble, so naturally I was tempted to deploy a clone with my reading history. The result is at: [bookshelf.mallya.dev/](https://bookshelf.mallya.dev/).
 
 The setup was fairly easy, just had to add stanzas to the [index.html] file, add a CNAME to point to it, and done! I added a few tweaks like making the books link to their goodreads page.
+
+I did want to point out one thing I learned about custom domains. I wanted the page to be located under `bookshelf.mallya.dev`. I realized that I could just use Github pages, and so I did. To get the DNS to work correctly, I had to:
+
+* add a file named `CNAME` [in the repo](https://github.com/pratikmallya/virtual-bookshelf/blob/816e8bac6ab3faede29d5536a6732892f28e618c/CNAME) containing the subdomain
+* add a CNAME DNS record. this pointed not to the project, but to the user github subdomain. So it looks like
+
+```
+bookshelf.mallya.dev.	3573	IN	CNAME	pratikmallya.github.io.
+``` 
 
 The only annoying this is that the [index.html] file needs everything to be input manually. Not really a problem considering that there weren't all that many books. Naturally, I wanted to make it easier, and it seemed like a good opportunity to dive into JS (which I haven't really worked with in a while).
 
