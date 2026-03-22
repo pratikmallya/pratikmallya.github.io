@@ -1,3 +1,4 @@
 _site/*
 vendor/*
 .bundle/*
+_notebooks/__marimo__/
